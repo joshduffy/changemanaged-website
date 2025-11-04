@@ -133,7 +133,16 @@
         ></i>
       );
     };
-
+/* --- Add this helper right here --- */
+function openPost(slug, newTab = true) {
+  const url = `${window.location.origin}${window.location.pathname}#/post/${slug}`;
+  if (newTab) {
+    window.open(url, "_blank", "noopener");
+  } else {
+    window.location.hash = `#/post/${slug}`;
+  }
+}
+/* --- end helper --- */
     /********** Tiny hash router (#/, #/post/:slug) **********/
     const useHashLocation = () => {
       const [hash, setHash] = React.useState(() => window.location.hash || "#/");
