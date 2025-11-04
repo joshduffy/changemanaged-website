@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Managed - Complex Transformation. Simple Execution.</title>
-    <meta name="description" content="Enterprise transformation consultancy specializing in change management, M&A integration, organizational design, and digital transformation. PROSCI certified, Six Sigma Black Belt expertise.">
-    <meta name="keywords" content="change management consulting, M&A integration, digital transformation, organizational design, enterprise transformation, business transformation, process optimization, ERP implementation">
+    <title>Change Managed | Strategic Transformation Consulting | M&A Integration & Organizational Design</title>
+    <meta name="description" content="Fortune 500 transformation consulting firm specializing in M&A integration, organizational design, and enterprise change management. PROSCI certified. 15+ years experience. Direct principal engagement.">
+    <meta name="keywords" content="transformation consulting, M&A integration consultant, organizational design consulting, change management PROSCI, Fortune 500 consulting, merger integration, post-merger integration, enterprise transformation advisor, Philadelphia consulting">
+    <meta name="author" content="Change Managed LLC">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="rating" content="general">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     
     <!-- SEO Meta Tags -->
-    <meta property="og:title" content="Change Managed - Enterprise Transformation Consulting">
-    <meta property="og:description" content="Strategic transformation consultancy for Fortune 500 companies. Expert merger integration, organizational design, and enterprise change management.">
+    <meta property="og:title" content="Change Managed - Strategic Transformation Consulting">
+    <meta property="og:description" content="When complex enterprise transformation can't fail. M&A integration, organizational design, and change management from experienced practitioners. Fortune 500 expertise.">
     <meta property="og:url" content="https://changemanaged.io">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://changemanaged.io/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Change Managed - Complex Transformation. Simple Execution.">
-    <meta name="twitter:description" content="Strategic change management for enterprise transformation.">
+    <meta name="twitter:title" content="Change Managed | Strategic Transformation Consulting">
+    <meta name="twitter:description" content="Fortune 500 transformation expertise. M&A integration, organizational design, change management. Direct principal engagement.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://changemanaged.io/">
+    
+    <!-- Google Fonts for Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- React and Dependencies -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -37,23 +48,32 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Change Managed",
-        "description": "Enterprise transformation consultancy specializing in change management, M&A integration, and organizational design",
+        "alternateName": "Change Managed LLC",
+        "description": "Strategic transformation consulting specializing in M&A integration, organizational design, and enterprise change management for Fortune 500 companies",
         "url": "https://changemanaged.io",
         "email": "info@changemanaged.io",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Philadelphia",
-            "addressRegion": "PA",
-            "addressCountry": "US"
+            "@addressRegion": "PA",
+            "@addressCountry": "US"
         },
+        "priceRange": "$$$$",
         "knowsAbout": [
-            "Enterprise Change Management",
             "M&A Integration",
-            "Digital Transformation",
+            "Post-Merger Integration", 
             "Organizational Design",
-            "Process Transformation",
-            "ERP Implementation"
-        ]
+            "Enterprise Change Management",
+            "PROSCI Methodology",
+            "Transformation Strategy",
+            "Integration Management Office",
+            "Carve-outs and Divestitures"
+        ],
+        "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+        },
+        "slogan": "Complex transformation. Simple execution."
     }
     </script>
     
@@ -66,6 +86,13 @@
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        /* Custom logo typography */
+        .logo-change {
+            font-weight: 300;
+        }
+        .logo-managed {
+            font-weight: 700;
         }
     </style>
 </head>
@@ -137,20 +164,20 @@
             {
               title: "Global Pharmaceutical SAP S/4HANA Implementation",
               industry: "Life Sciences",
-              challenge: "A global biopharmaceutical company required enterprise-wide change management for a critical SAP S/4HANA transformation affecting operations across 15+ countries.",
+              challenge: "A global biopharmaceutical company required enterprise-wide change management for a critical SAP S/4HANA transformation affecting operations across 100+ countries.",
               approach: [
                 "Led comprehensive change management strategy for 12-month implementation timeline",
                 "Developed multi-tiered training programs achieving 95% user adoption rates",
-                "Implemented stakeholder engagement across regulatory, operations, quality, and IT teams",
-                "Created communication framework supporting GxP compliance and validation requirements"
+                "Implemented stakeholder engagement across the enterprise and activated 150+ member change network",
+                "Created cmultichannel communication plans tailord to diverse global audiences"
               ],
               results: [
                 "On-time go-live with zero compliance issues",
-                "User adoption exceeding industry benchmarks by 20%",
+                "User adoption exceeding industry benchmarks",
                 "Measurable productivity improvements within 60 days",
-                "Sustained adoption rates above 90% at 6-month mark"
+                "Sustained adoption rates at 6-month mark"
               ],
-              duration: "12 months",
+              duration: "18 months",
               teamSize: "Cross-functional team of 100+"
             },
             {
@@ -199,7 +226,10 @@
               <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
                 <div className="max-w-6xl mx-auto px-6 py-4">
                   <div className="flex justify-between items-center">
-                    <div className="font-bold text-xl tracking-tight">CHANGE MANAGED</div>
+                    <div className="font-bold text-xl tracking-tight">
+                      <span className="logo-change">CHANGE</span>{' '}
+                      <span className="logo-managed">MANAGED</span>
+                    </div>
                     
                     <div className="hidden md:flex space-x-8 text-sm">
                       <a href="#services" className="hover:text-gray-600 transition">Services</a>
@@ -462,7 +492,7 @@
                           <Icon name="mail" size={18} />
                           info@changemanaged.io
                         </a>
-                        <a href="https://linkedin.com/in/changeleadership" className="flex items-center gap-3 text-gray-300 hover:text-white transition">
+                        <a href="https://linkedin.com/company/change-managed" className="flex items-center gap-3 text-gray-300 hover:text-white transition">
                           <Icon name="linkedin" size={18} />
                           Connect on LinkedIn
                         </a>
