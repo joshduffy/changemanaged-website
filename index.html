@@ -77,6 +77,41 @@
     }
   </script>
 
+  <!-- Umami Analytics -->
+  <script async src="https://analytics.changemanaged.io/script.js" data-website-id="YOUR-WEBSITE-ID"></script>
+  <script>
+    // Track hash route changes for blog post navigation
+    document.addEventListener('DOMContentLoaded', function () {
+      // Track initial page load
+      if (window.umami && typeof window.umami.track === 'function') {
+        window.umami.track();
+      }
+      
+      // Track hash changes (for blog post navigation)
+      window.addEventListener('hashchange', function () {
+        if (window.umami && typeof window.umami.track === 'function') {
+          // Track the new hash route
+          const hash = window.location.hash || '#/';
+          window.umami.track('pageview', { url: window.location.pathname + hash });
+        }
+      });
+      
+      // Track clicks on key CTAs
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('a[href="#contact"]')) {
+          if (window.umami && typeof window.umami.track === 'function') {
+            window.umami.track('cta-click', { type: 'contact' });
+          }
+        }
+        if (e.target.closest('.cta-primary')) {
+          if (window.umami && typeof window.umami.track === 'function') {
+            window.umami.track('cta-click', { type: 'primary-cta' });
+          }
+        }
+      });
+    });
+  </script>
+
   <style>
     /* Design System Variables */
     :root {
