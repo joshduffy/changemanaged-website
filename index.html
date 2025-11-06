@@ -2,21 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>
-    Change Managed | Strategic Transformation Consulting | M&A Integration & Organizational Design
-  </title>
-  <meta
-    name="description"
-    content="Fortune 500 transformation consulting firm specializing in M&A integration, organizational design, and enterprise change management. PROSCI certified. 15+ years experience. Direct principal engagement."
-  />
-  <meta
-    name="keywords"
-    content="transformation consulting, change management consulting, organizational design consulting, change management PROSCI, Fortune 500 consulting, mergers and acquisition, post-merger integration, enterprise transformation advisor, Philadelphia consulting"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Managed | Strategic Transformation Consulting | M&A Integration & Organizational Design</title>
+  <meta name="description" content="Fortune 500 transformation consulting firm specializing in M&A integration, organizational design, and enterprise change management. PROSCI certified. 15+ years experience. Direct principal engagement." />
+  <meta name="keywords" content="transformation consulting, change management consulting, organizational design consulting, change management PROSCI, Fortune 500 consulting, mergers and acquisition, post-merger integration, enterprise transformation advisor, Philadelphia consulting" />
   <meta name="author" content="Change Managed LLC" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
@@ -26,30 +15,21 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Change Managed - Strategic Transformation Consulting" />
-  <meta
-    property="og:description"
-    content="When complex enterprise transformation can't fail. M&A leadership, organizational design, and change management from experienced practitioners. Fortune 500 expertise."
-  />
+  <meta property="og:description" content="When complex enterprise transformation can't fail. M&A leadership, organizational design, and change management from experienced practitioners. Fortune 500 expertise." />
   <meta property="og:url" content="https://changemanaged.io" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://changemanaged.io/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Change Managed | Strategic Transformation Consulting" />
-  <meta
-    name="twitter:description"
-    content="Fortune 500 transformation expertise. M&A leadership, organizational design, change management. Direct principal engagement."
-  />
+  <meta name="twitter:description" content="Fortune 500 transformation expertise. M&A leadership, organizational design, change management. Direct principal engagement." />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://changemanaged.io/" />
 
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts: Inter + Inter Tight -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- React, ReactDOM, Babel (for in-browser JSX transform) -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -98,21 +78,161 @@
   </script>
 
   <style>
-    /* Minimal baseline styles */
+    /* Design System Variables */
+    :root {
+      /* Foundation Colors */
+      --charcoal: #1A1A1A;
+      --cream: #FAFAF8;
+      --warm-linen: #F5F1E8;
+      --taupe: #8B7355;
+      --stone: #C9C5BD;
+      --graphite: #666666;
+      
+      /* Strategic Accent Colors */
+      --deep-sage: #2D5F4F;
+      --muted-sage: #5A7C6F;
+      --clay: #8E6B4E;
+      --sand: #B5956A;
+      
+      /* Transitions */
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-fast: all 0.15s ease;
+    }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Roboto", sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
     }
+    
+    /* Typography - using Inter Tight for display */
+    .display-font {
+      font-family: 'Inter Tight', sans-serif;
+    }
+    
+    /* Logo with sophisticated weighting */
     .logo-change {
+      font-family: 'Inter Tight', sans-serif;
       font-weight: 300;
+      letter-spacing: 0.02em;
     }
+    
     .logo-managed {
-      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Delta Symbol Styles */
+    .delta-symbol {
+      transition: var(--transition-smooth);
+      stroke: var(--charcoal);
+      stroke-width: 1.5;
+      fill: none;
+    }
+    
+    .delta-symbol:hover {
+      stroke: var(--deep-sage);
+      transform: rotate(45deg);
+    }
+    
+    /* Service cards with subtle accent */
+    .service-card {
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+    
+    .service-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: transparent;
+      transition: var(--transition-smooth);
+    }
+    
+    .service-card:hover::before {
+      background: var(--deep-sage);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45, 95, 79, 0.08);
+    }
+    
+    /* Metric highlights */
+    .metric-value {
+      color: var(--deep-sage);
+      font-weight: 500;
+    }
+    
+    /* CTA button styles */
+    .cta-primary {
+      background: var(--charcoal);
+      color: var(--cream);
+      transition: var(--transition-smooth);
+    }
+    
+    .cta-primary:hover {
+      background: var(--deep-sage);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(45, 95, 79, 0.2);
+    }
+    
+    /* Nav link active states */
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--deep-sage);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--deep-sage);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Insight card enhancements */
+    .insight-card {
+      transition: var(--transition-smooth);
+      border-color: var(--stone);
+    }
+    
+    .insight-card:hover {
+      border-color: var(--muted-sage);
+      box-shadow: 0 4px 16px rgba(45, 95, 79, 0.06);
+    }
+    
+    /* Tag styles with sage accent */
+    .tag {
+      background: var(--warm-linen);
+      color: var(--taupe);
+      transition: var(--transition-smooth);
+    }
+    
+    .tag:hover {
+      background: var(--muted-sage);
+      color: var(--cream);
     }
   </style>
 </head>
@@ -123,7 +243,7 @@
   <script type="text/babel" data-presets="react">
     const { useState, useEffect } = React;
 
-    // Lucide icon wrapper — renders an <i> that Lucide will upgrade post-render
+    // Lucide icon wrapper
     const Icon = ({ name, size = 24, className = "" }) => {
       return (
         <i
@@ -133,17 +253,32 @@
         ></i>
       );
     };
-/* --- Add this helper right here --- */
-function openPost(slug, newTab = true) {
-  const url = `${window.location.origin}${window.location.pathname}#/post/${slug}`;
-  if (newTab) {
-    window.open(url, "_blank", "noopener");
-  } else {
-    window.location.hash = `#/post/${slug}`;
-  }
-}
-/* --- end helper --- */
-    /********** Tiny hash router (#/, #/post/:slug) **********/
+    
+    // Delta symbol component
+    const DeltaSymbol = ({ size = 40, className = "" }) => {
+      const viewSize = size * 1.5;
+      const scale = size / 40;
+      return (
+        <svg 
+          viewBox={`0 0 ${viewSize} ${viewSize * 0.866}`} 
+          className={`delta-symbol ${className}`}
+          style={{ width: size, height: size * 0.866 }}
+        >
+          <path d={`M${viewSize/2} ${viewSize * 0.1} L${viewSize * 0.9} ${viewSize * 0.8} L${viewSize * 0.1} ${viewSize * 0.8} Z`} />
+        </svg>
+      );
+    };
+
+    function openPost(slug, newTab = true) {
+      const url = `${window.location.origin}${window.location.pathname}#/post/${slug}`;
+      if (newTab) {
+        window.open(url, "_blank", "noopener");
+      } else {
+        window.location.hash = `#/post/${slug}`;
+      }
+    }
+
+    /********** Hash router **********/
     const useHashLocation = () => {
       const [hash, setHash] = React.useState(() => window.location.hash || "#/");
       React.useEffect(() => {
@@ -157,9 +292,9 @@ function openPost(slug, newTab = true) {
     const NotFound = () => (
       <main className="pt-28 pb-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-light mb-2">Not found</h1>
-          <p className="text-gray-600 mb-6">That article doesn’t exist.</p>
-          <a href="#/" className="text-black underline flex items-center gap-2">
+          <h1 className="text-3xl font-light display-font mb-2">Not found</h1>
+          <p className="text-gray-600 mb-6">That article doesn't exist.</p>
+          <a href="#/" className="text-black underline flex items-center gap-2 hover:text-[var(--deep-sage)] transition-colors">
             <i data-lucide="arrow-left"></i> Back to Home
           </a>
         </div>
@@ -175,10 +310,9 @@ function openPost(slug, newTab = true) {
       return (
         <main className="pt-28 pb-20 px-6">
           <div className="max-w-3xl mx-auto prose prose-neutral">
-            {/* Render trusted HTML from our own source */}
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
             <div className="mt-12">
-              <a href="#/" className="inline-flex items-center gap-2 text-black underline">
+              <a href="#/" className="inline-flex items-center gap-2 text-black underline hover:text-[var(--deep-sage)] transition-colors">
                 <i data-lucide="arrow-left"></i> Back to Home
               </a>
             </div>
@@ -195,16 +329,15 @@ function openPost(slug, newTab = true) {
         const post = posts.find((p) => p.slug === slug);
         return post ? <PostPage post={post} /> : <NotFound />;
       }
-      return children; // home page
+      return children;
     };
 
-    /********** Site data (unchanged sections below) **********/
+    /********** Site data **********/
     const services = [
       {
         icon: "users",
         title: "Enterprise Change Management",
-        description:
-          "Deploy PROSCI-certified change methodologies for large-scale transformations. Build sustainable adoption through comprehensive stakeholder engagement, communications grounded in behavioral science, and enterprise-wide change networks that drive results.",
+        description: "Deploy PROSCI-certified change methodologies for large-scale transformations. Build sustainable adoption through comprehensive stakeholder engagement, communications grounded in behavioral science, and enterprise-wide change networks that drive results.",
         capabilities: [
           "PROSCI/ADKAR methodology implementation and certification",
           "Change impact assessment, readiness planning, and risk mitigation",
@@ -213,22 +346,9 @@ function openPost(slug, newTab = true) {
         ]
       },
       {
-        icon: "briefcase",
-        title: "Technology & Process Transformation",
-        description:
-          "Guide complex system implementations and process improvements from vendor selection through post-deployment optimization. Deep expertise in ERP (SAP, Oracle, Workday), HRIS, and operational technology deployments, with focus on measurable adoption and ROI.",
-        capabilities: [
-          "Technology selection, business case development, and implementation strategy",
-          "End-to-end business process optimization and reengineering",
-          "Vendor selection, contract negotiation, and program management",
-          "User adoption strategies and quantifiable benefits realization tracking"
-        ]
-      },
-      {
         icon: "git-branch",
         title: "Organizational Design",
-        description:
-          "Design future-state organizations that balance efficiency, agility, and cultural alignment. From post-merger structures to growth-driven redesigns, create operating models with clear decision rights, optimal spans of control, and strategic talent placement.",
+        description: "Design future-state organizations that balance efficiency, agility, and cultural alignment. From post-merger structures to growth-driven redesigns, create operating models with clear decision rights, optimal spans of control, and strategic talent placement.",
         capabilities: [
           "Multi-level organizational assessment, design, and transformation",
           "Talent assessment frameworks, selection processes, and placement strategies",
@@ -239,8 +359,7 @@ function openPost(slug, newTab = true) {
       {
         icon: "git-merge",
         title: "M&A Integration & Carve-Outs",
-        description:
-          "Navigate complex mergers, acquisitions, and divestitures with battle-tested frameworks from $3B+ deals. Whether integrating two industry leaders or executing a strategic carve-out, deliver projected synergies while maintaining business continuity and cultural cohesion.",
+        description: "Navigate complex mergers, acquisitions, and divestitures with battle-tested frameworks from $3B+ deals. Whether integrating two industry leaders or executing a strategic carve-out, deliver projected synergies while maintaining business continuity and cultural cohesion.",
         capabilities: [
           "Integration Management Office (IMO) design, setup, and leadership",
           "Day 1 readiness planning, operating model design, and governance establishment",
@@ -250,43 +369,42 @@ function openPost(slug, newTab = true) {
       }
     ];
 
-    /********** Blog content (conversational, story-driven) **********/
+    /********** Blog content **********/
     const blogPosts = [
       {
         slug: "first-100-days",
         title: "The First 100 Days: A Practical Guide to Merger Integration",
         date: "October 2024",
         readTime: "8 min read",
-        excerpt:
-          "The first 100 days don’t have to be dramatic. They have to be deliberate. Here’s how we run Day 0 through Day 100 so customers stay, employees exhale, and the thesis starts showing up in numbers.",
+        excerpt: "The first 100 days don't have to be dramatic. They have to be deliberate. Here's how we run Day 0 through Day 100 so customers stay, employees exhale, and the thesis starts showing up in numbers.",
         content: `
 <div>
-  <h1 class="text-3xl md:text-4xl font-light mb-4">The First 100 Days: A Practical Guide to Merger Integration</h1>
+  <h1 class="text-3xl md:text-4xl font-light display-font mb-4">The First 100 Days: A Practical Guide to Merger Integration</h1>
   <p class="text-gray-500 mb-8">October 2024 • 8 min read</p>
 
-  <p class="mb-4">On Day 0 of a recent deal, the CFO slid a one-pager across the table. “If we hit <em>these</em> numbers, the board will call this a success. Everything else is noise.” That sheet became the north star for the integration. We built the work around it, not the other way around.</p>
+  <p class="mb-4">On Day 0 of a recent deal, the CFO slid a one-pager across the table. "If we hit <em>these</em> numbers, the board will call this a success. Everything else is noise." That sheet became the north star for the integration. We built the work around it, not the other way around.</p>
 
-  <p class="mb-4">Here’s the rhythm we use. It’s not theatrical. It’s the boring kind of consistent that keeps customers, pays people on time, and makes leaders look like they’ve done this before.</p>
+  <p class="mb-4">Here's the rhythm we use. It's not theatrical. It's the boring kind of consistent that keeps customers, pays people on time, and makes leaders look like they've done this before.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Day 0: Put a spine in the program</h2>
-  <p class="mb-4">Before the ink is dry, we stand up an Integration Management Office with a single cadence and a single source of truth. Finance sits with us, not apart from us. Every workstream lead has a charter tied directly to the value story. Decisions get logged. Risks have owners. We’re not playing whack-a-mole in Slack—there’s a place where the work lives.</p>
+  <p class="mb-4">Before the ink is dry, we stand up an Integration Management Office with a single cadence and a single source of truth. Finance sits with us, not apart from us. Every workstream lead has a charter tied directly to the value story. Decisions get logged. Risks have owners. We're not playing whack-a-mole in Slack—there's a place where the work lives.</p>
 
-  <p class="mb-4">On one life sciences integration, that meant landing the unglamorous basics first: identity and access, payroll continuity, customer communications signed by leaders the market actually knows. By Day 1, employees could badge in, get paid, and explain what was changing in a page or less. It wasn’t flashy. It was confidence-building.</p>
+  <p class="mb-4">On one life sciences integration, that meant landing the unglamorous basics first: identity and access, payroll continuity, customer communications signed by leaders the market actually knows. By Day 1, employees could badge in, get paid, and explain what was changing in a page or less. It wasn't flashy. It was confidence-building.</p>
 
-  <h2 class="text-2xl font-light mt-8 mb-3">Days 1–30: Don’t break trust</h2>
-  <p class="mb-4">The fastest way to burn credibility is to surprise customers or miss the first payroll. So we don’t. We call top accounts in week one and give them names, not aliases. We hold listening sessions with the people closest to the work and publish a short weekly note to everyone else: what we decided, what’s next, and where to raise a hand.</p>
+  <h2 class="text-2xl font-light mt-8 mb-3">Days 1–30: Don't break trust</h2>
+  <p class="mb-4">The fastest way to burn credibility is to surprise customers or miss the first payroll. So we don't. We call top accounts in week one and give them names, not aliases. We hold listening sessions with the people closest to the work and publish a short weekly note to everyone else: what we decided, what's next, and where to raise a hand.</p>
 
   <p class="mb-4">In a data & analytics carve-out, we sat the program team next to customer support for two weeks. Patterns emerged by day three—questions we could answer once, clearly, and everywhere. Churn risk dropped because silence disappeared.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Days 31–60: Choose how the company will actually work</h2>
-  <p class="mb-4">This is the window where org design matters. We don’t draw boxes; we design decisions. Who sets price? Who prioritizes the roadmap? Where does information live? We codify spans and layers, write down real RACIs, and place leaders you can trust to say “no” as comfortably as “yes.”</p>
+  <p class="mb-4">This is the window where org design matters. We don't draw boxes; we design decisions. Who sets price? Who prioritizes the roadmap? Where does information live? We codify spans and layers, write down real RACIs, and place leaders you can trust to say "no" as comfortably as "yes."</p>
 
-  <p class="mb-4">With one global SAP program, that meant agreeing to a <em>best-of-both</em> model in Finance and an <em>absorb</em> model in Procurement. The choice wasn’t ideological—it was practical, and it unlocked the sequencing for training and cutovers.</p>
+  <p class="mb-4">With one global SAP program, that meant agreeing to a <em>best-of-both</em> model in Finance and an <em>absorb</em> model in Procurement. The choice wasn't ideological—it was practical, and it unlocked the sequencing for training and cutovers.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Days 61–100: Show proof, not promises</h2>
-  <p class="mb-4">By now we want receipts. A dashboard that shows run-rate value, not just green boxes. A customer-facing improvement you can point to. Managers who can explain—without a slide—what’s different this quarter. When the first system wave lands, we run a command center that behaves like air traffic control: tight checklists, tight handoffs, zero heroics.</p>
+  <p class="mb-4">By now we want receipts. A dashboard that shows run-rate value, not just green boxes. A customer-facing improvement you can point to. Managers who can explain—without a slide—what's different this quarter. When the first system wave lands, we run a command center that behaves like air traffic control: tight checklists, tight handoffs, zero heroics.</p>
 
-  <p class="mb-4">The punchline: no fireworks, just momentum. That’s the job. If you want this kind of integration—measured, humane, on-thesis—<a href="#contact" class="underline">let’s talk</a>.</p>
+  <p class="mb-4">The punchline: no fireworks, just momentum. That's the job. If you want this kind of integration—measured, humane, on-thesis—<a href="#contact" class="underline" style="color: var(--deep-sage);">let's talk</a>.</p>
 </div>
 `
       },
@@ -295,36 +413,35 @@ function openPost(slug, newTab = true) {
         title: "Why 70% of Transformations Fail (And How to Be in the 30%)",
         date: "September 2024",
         readTime: "6 min read",
-        excerpt:
-          "Whether the exact percentage is 70 or 57 is less interesting than the pattern: programs fail for the same human reasons. Here’s how we run them differently so the value actually shows up.",
+        excerpt: "Whether the exact percentage is 70 or 57 is less interesting than the pattern: programs fail for the same human reasons. Here's how we run them differently so the value actually shows up.",
         content: `
 <div>
-  <h1 class="text-3xl md:text-4xl font-light mb-4">Why 70% of Transformations Fail (And How to Be in the 30%)</h1>
+  <h1 class="text-3xl md:text-4xl font-light display-font mb-4">Why 70% of Transformations Fail (And How to Be in the 30%)</h1>
   <p class="text-gray-500 mb-8">September 2024 • 6 min read</p>
 
-  <p class="mb-4">I walked into a kickoff where twelve teams each had a beautiful roadmap—and not one shared a definition of “done.” Everyone was busy. Nobody was moving the number the CEO cared about. That’s not rare. It’s fixable.</p>
+  <p class="mb-4">I walked into a kickoff where twelve teams each had a beautiful roadmap—and not one shared a definition of "done." Everyone was busy. Nobody was moving the number the CEO cared about. That's not rare. It's fixable.</p>
 
-  <p class="mb-4">Here’s what we do instead, drawn from large ERP programs, carve-outs, and commercial transformations where the value had a deadline.</p>
+  <p class="mb-4">Here's what we do instead, drawn from large ERP programs, carve-outs, and commercial transformations where the value had a deadline.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Start with a sentence you can say out loud</h2>
-  <p class="mb-4">If a director can’t explain the point of the program in one breath—how it makes money, saves money, or reduces risk—we’re not ready to start. We build a one-page value story and tape it to governance. Every update ties back to it. If something doesn’t serve the sentence, it moves to the <em>not now</em> list. Focus is a kindness.</p>
+  <p class="mb-4">If a director can't explain the point of the program in one breath—how it makes money, saves money, or reduces risk—we're not ready to start. We build a one-page value story and tape it to governance. Every update ties back to it. If something doesn't serve the sentence, it moves to the <em>not now</em> list. Focus is a kindness.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Give leaders a way to lead</h2>
-  <p class="mb-4">Sponsorship isn’t a logo on slide one. It’s behaviors. In practice: a weekly decision SLA, visible walk-abouts with front-line teams, and the courage to kill work that isn’t earning its keep. When leaders do that consistently, resistance melts because people finally see who’s steering.</p>
+  <p class="mb-4">Sponsorship isn't a logo on slide one. It's behaviors. In practice: a weekly decision SLA, visible walk-abouts with front-line teams, and the courage to kill work that isn't earning its keep. When leaders do that consistently, resistance melts because people finally see who's steering.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Design the work people will actually do</h2>
-  <p class="mb-4">Go-lives don’t change outcomes. New behaviors do. We map impacts by role, build training around real scenarios, and equip managers to coach—not just to forward emails. The leading indicators we watch are simple: usage that sticks, proficiency that climbs, and sentiment that stabilizes after the first dip. When those go in the right direction, the financials tend to follow.</p>
+  <p class="mb-4">Go-lives don't change outcomes. New behaviors do. We map impacts by role, build training around real scenarios, and equip managers to coach—not just to forward emails. The leading indicators we watch are simple: usage that sticks, proficiency that climbs, and sentiment that stabilizes after the first dip. When those go in the right direction, the financials tend to follow.</p>
 
   <h2 class="text-2xl font-light mt-8 mb-3">Run governance that earns trust</h2>
-  <p class="mb-4">Good governance is mercifully boring. One RAID, one decisions log, one cadence. No shadow meetings. We show red when it’s red and make it very clear who is driving it back to green. Finance sits in the room so the story is about value, not vibes.</p>
+  <p class="mb-4">Good governance is mercifully boring. One RAID, one decisions log, one cadence. No shadow meetings. We show red when it's red and make it very clear who is driving it back to green. Finance sits in the room so the story is about value, not vibes.</p>
 
-  <p class="mb-4">If you’re staring at a program that feels heavy and oddly hollow at the same time, we can help you put the weight where it belongs—on results, on people, and on choices that compound. <a href="#contact" class="underline">Start a conversation</a>.</p>
+  <p class="mb-4">If you're staring at a program that feels heavy and oddly hollow at the same time, we can help you put the weight where it belongs—on results, on people, and on choices that compound. <a href="#contact" class="underline" style="color: var(--deep-sage);">Start a conversation</a>.</p>
 </div>
 `
       }
     ];
 
-    // Lucide refresh whenever the UI changes
+    // Lucide refresh
     function useLucideRefresh(deps = []) {
       useEffect(() => {
         if (window.lucide?.createIcons) window.lucide.createIcons();
@@ -338,22 +455,25 @@ function openPost(slug, newTab = true) {
 
       return (
         <Router posts={blogPosts}>
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen" style={{ background: 'var(--cream)' }}>
             {/* Navigation */}
-            <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+            <nav className="fixed top-0 w-full bg-[var(--cream)]/95 backdrop-blur-sm z-50 border-b" style={{ borderColor: 'var(--stone)' }}>
               <div className="max-w-6xl mx-auto px-6 py-4">
                 <div className="flex justify-between items-center">
-                  <div className="font-bold text-xl tracking-tight">
-                    <span className="logo-change">CHANGE</span>{" "}
-                    <span className="logo-managed">MANAGED</span>
+                  <div className="flex items-center gap-3">
+                    <DeltaSymbol size={24} />
+                    <div className="text-xl tracking-tight">
+                      <span className="logo-change">CHANGE</span>{" "}
+                      <span className="logo-managed">MANAGED</span>
+                    </div>
                   </div>
 
                   <div className="hidden md:flex space-x-8 text-sm">
-                    <a href="#services" className="hover:text-gray-600 transition">Services</a>
-                    <a href="#approach" className="hover:text-gray-600 transition">Approach</a>
-                    <a href="#work" className="hover:text-gray-600 transition">Work</a>
-                    <a href="#insights" className="hover:text-gray-600 transition">Insights</a>
-                    <a href="#contact" className="hover:text-gray-600 transition">Contact</a>
+                    <a href="#services" className="nav-link">Services</a>
+                    <a href="#approach" className="nav-link">Approach</a>
+                    <a href="#work" className="nav-link">Work</a>
+                    <a href="#insights" className="nav-link">Insights</a>
+                    <a href="#contact" className="nav-link">Contact</a>
                   </div>
 
                   <button
@@ -368,13 +488,13 @@ function openPost(slug, newTab = true) {
 
               {/* Mobile Menu */}
               {mobileMenuOpen && (
-                <div className="md:hidden border-t border-gray-100 bg-white">
+                <div className="md:hidden border-t bg-[var(--cream)]" style={{ borderColor: 'var(--stone)' }}>
                   <div className="px-6 py-4 space-y-3">
-                    <a href="#services" className="block py-2">Services</a>
-                    <a href="#approach" className="block py-2">Approach</a>
-                    <a href="#work" className="block py-2">Work</a>
-                    <a href="#insights" className="block py-2">Insights</a>
-                    <a href="#contact" className="block py-2">Contact</a>
+                    <a href="#services" className="block py-2 hover:text-[var(--deep-sage)] transition-colors">Services</a>
+                    <a href="#approach" className="block py-2 hover:text-[var(--deep-sage)] transition-colors">Approach</a>
+                    <a href="#work" className="block py-2 hover:text-[var(--deep-sage)] transition-colors">Work</a>
+                    <a href="#insights" className="block py-2 hover:text-[var(--deep-sage)] transition-colors">Insights</a>
+                    <a href="#contact" className="block py-2 hover:text-[var(--deep-sage)] transition-colors">Contact</a>
                   </div>
                 </div>
               )}
@@ -383,43 +503,57 @@ function openPost(slug, newTab = true) {
             {/* Hero Section */}
             <section className="pt-32 pb-20 px-6">
               <div className="max-w-4xl mx-auto">
-                <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6">
-                  Complex transformation.<br />
+                <h1 className="text-5xl md:text-6xl leading-tight mb-6 display-font">
+                  <span className="font-light">Complex transformation.</span><br />
                   <span className="font-normal">Simple execution.</span>
                 </h1>
 
-                <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+                <p className="text-xl mb-8 max-w-2xl" style={{ color: 'var(--graphite)' }}>
                   Strategic change management for enterprises navigating technology transformation, organizational restructuring, and M&A.
                 </p>
 
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition"
-                >
-                  Start a Conversation <Icon name="arrow-right" size={18} className="inline" />
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 cta-primary px-6 py-3 rounded"
+                  >
+                    Start a Conversation <Icon name="arrow-right" size={18} className="inline" />
+                  </a>
+                  <div className="flex items-center gap-4 text-sm" style={{ color: 'var(--taupe)' }}>
+                    <span className="flex items-center gap-2">
+                      <DeltaSymbol size={16} />
+                      <span className="metric-value">15+</span> Years Experience
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="metric-value">$3B+</span> Transformations
+                    </span>
+                  </div>
+                </div>
               </div>
             </section>
 
             {/* Services */}
-            <section id="services" className="py-20 px-6 bg-gray-50">
+            <section id="services" className="py-20 px-6" style={{ background: 'var(--warm-linen)' }}>
               <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-light mb-4">Core Capabilities</h2>
-                <p className="text-gray-600 mb-12 max-w-2xl">
-                  Deep expertise where strategy meets execution. Real experience from
-                  successful enterprise transformations.
+                <h2 className="text-3xl font-light mb-4 display-font">Core Capabilities</h2>
+                <p className="mb-12 max-w-2xl" style={{ color: 'var(--graphite)' }}>
+                  Deep expertise where strategy meets execution. Real experience from successful enterprise transformations.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-3 gap-8">
                   {services.map((service, i) => (
-                    <div key={i} className="bg-white rounded-lg p-8 border border-gray-100">
-                      <Icon name={service.icon} size={32} className="mb-4 text-gray-700" />
+                    <div key={i} className="service-card bg-[var(--cream)] rounded-lg p-8 border" style={{ borderColor: 'var(--stone)' }}>
+                      <div className="mb-4" style={{ color: 'var(--deep-sage)' }}>
+                        <Icon name={service.icon} size={32} />
+                      </div>
                       <h3 className="text-xl font-medium mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <p className="mb-4 text-sm" style={{ color: 'var(--graphite)' }}>{service.description}</p>
                       <ul className="space-y-2">
                         {service.capabilities.map((capability, j) => (
-                          <li key={j} className="text-sm text-gray-600 flex items-start gap-2">
-                            <Icon name="check" size={16} className="mt-0.5 flex-shrink-0" />
+                          <li key={j} className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <span style={{ color: 'var(--muted-sage)' }}>
+                              <Icon name="check" size={16} className="mt-0.5 flex-shrink-0" />
+                            </span>
                             <span>{capability}</span>
                           </li>
                         ))}
@@ -433,66 +567,60 @@ function openPost(slug, newTab = true) {
             {/* Approach */}
             <section id="approach" className="py-20 px-6">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-light mb-4">Our Approach</h2>
-                <p className="text-gray-600 mb-8">
-                  We combine strategic vision with operational excellence, ensuring
-                  transformations deliver measurable business value.
+                <h2 className="text-3xl font-light mb-4 display-font">Our Approach</h2>
+                <p className="mb-8" style={{ color: 'var(--graphite)' }}>
+                  We combine strategic vision with operational excellence, ensuring transformations deliver measurable business value.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
                   <div>
-                    <div className="text-3xl font-light mb-3">1.</div>
+                    <div className="text-3xl font-light mb-3 display-font" style={{ color: 'var(--deep-sage)' }}>1.</div>
                     <h3 className="font-medium mb-2">Assess & Strategize</h3>
-                    <p className="text-sm text-gray-600">
-                      Comprehensive evaluation of current state, stakeholder alignment,
-                      and strategic roadmap development.
+                    <p className="text-sm" style={{ color: 'var(--graphite)' }}>
+                      Comprehensive evaluation of current state, stakeholder alignment, and strategic roadmap development.
                     </p>
                   </div>
                   <div>
-                    <div className="text-3xl font-light mb-3">2.</div>
+                    <div className="text-3xl font-light mb-3 display-font" style={{ color: 'var(--muted-sage)' }}>2.</div>
                     <h3 className="font-medium mb-2">Mobilize & Execute</h3>
-                    <p className="text-sm text-gray-600">
-                      Structured deployment with clear governance, risk management,
-                      and continuous stakeholder engagement.
+                    <p className="text-sm" style={{ color: 'var(--graphite)' }}>
+                      Structured deployment with clear governance, risk management, and continuous stakeholder engagement.
                     </p>
                   </div>
                   <div>
-                    <div className="text-3xl font-light mb-3">3.</div>
+                    <div className="text-3xl font-light mb-3 display-font" style={{ color: 'var(--clay)' }}>3.</div>
                     <h3 className="font-medium mb-2">Sustain & Optimize</h3>
-                    <p className="text-sm text-gray-600">
-                      Embedding change through capability building, continuous
-                      improvement, and benefits realization.
+                    <p className="text-sm" style={{ color: 'var(--graphite)' }}>
+                      Embedding change through capability building, continuous improvement, and benefits realization.
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 rounded-lg p-8">
-                  <p className="text-lg font-light mb-6">
+                <div className="rounded-lg p-8" style={{ background: 'var(--warm-linen)' }}>
+                  <p className="text-lg font-light mb-6 display-font" style={{ color: 'var(--deep-sage)' }}>
                     "Transformation is not a destination, it's a capability."
                   </p>
-                  <p className="text-gray-600">
-                    We focus on building internal capabilities that sustain change long after
-                    the consultants leave. Our success is measured by your organization's
-                    ability to continuously adapt and improve.
+                  <p style={{ color: 'var(--graphite)' }}>
+                    We focus on building internal capabilities that sustain change long after the consultants leave. Our success is measured by your organization's ability to continuously adapt and improve.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Work / Case Studies (unchanged visuals/content) */}
-            <section id="work" className="py-20 px-6 bg-gray-50">
+            {/* Work / Case Studies */}
+            <section id="work" className="py-20 px-6" style={{ background: 'var(--warm-linen)' }}>
               <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-light mb-4">Representative Work</h2>
-                <p className="text-gray-600 mb-12">
+                <h2 className="text-3xl font-light mb-4 display-font">Representative Work</h2>
+                <p className="mb-12" style={{ color: 'var(--graphite)' }}>
                   Examples of successful transformation initiatives across industries.
                 </p>
 
                 <div className="space-y-8">
-                  <div className="bg-white rounded-lg border border-gray-200 p-8">
+                  <div className="bg-[var(--cream)] rounded-lg border p-8" style={{ borderColor: 'var(--stone)' }}>
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-medium mb-2">Global Pharmaceutical SAP S/4HANA Implementation</h3>
-                        <div className="flex gap-4 text-sm text-gray-600">
+                        <div className="flex gap-4 text-sm" style={{ color: 'var(--taupe)' }}>
                           <span className="flex items-center gap-1"><Icon name="building-2" size={16} />Life Sciences</span>
                           <span className="flex items-center gap-1"><Icon name="calendar" size={16} />18 months</span>
                           <span className="flex items-center gap-1"><Icon name="users" size={16} />Cross-functional team of 100+</span>
@@ -500,71 +628,101 @@ function openPost(slug, newTab = true) {
                       </div>
                     </div>
                     <div className="mb-6">
-                      <p className="text-gray-700 mb-4">
+                      <p className="mb-4" style={{ color: 'var(--graphite)' }}>
                         <span className="font-medium">Challenge:</span> A global biopharmaceutical company required enterprise-wide change management for a critical SAP S/4HANA transformation affecting operations across 100+ countries.
                       </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-medium text-sm mb-3">Approach</h4>
+                        <h4 className="font-medium text-sm mb-3" style={{ color: 'var(--deep-sage)' }}>Approach</h4>
                         <ul className="space-y-2">
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Led comprehensive change management strategy for 18-month implementation timeline</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Developed multi-tiered training programs achieving 95% user adoption rates</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Implemented stakeholder engagement across the enterprise, conducting global roadshows, design sessions, and activating a 150+ member change network</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Created multichannel communication plans tailored to diverse global audiences</span></li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--muted-sage)' }} />
+                            <span>Led comprehensive change management strategy for 18-month implementation timeline</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--muted-sage)' }} />
+                            <span>Developed multi-tiered training programs achieving 95% user adoption rates</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--muted-sage)' }} />
+                            <span>Implemented stakeholder engagement across the enterprise</span>
+                          </li>
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-medium text-sm mb-3">Results</h4>
+                        <h4 className="font-medium text-sm mb-3" style={{ color: 'var(--deep-sage)' }}>Results</h4>
                         <ul className="space-y-2">
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>On-time go-live with zero compliance issues</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>User adoption exceeding industry benchmarks</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Measurable productivity improvements within 60 days</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Sustained adoption rates at 6-month mark</span></li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--deep-sage)' }} />
+                            <span>On-time go-live with zero compliance issues</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--deep-sage)' }} />
+                            <span>User adoption exceeding industry benchmarks</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--deep-sage)' }} />
+                            <span>Measurable productivity improvements within 60 days</span>
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-lg border border-gray-200 p-8">
+                  <div className="bg-[var(--cream)] rounded-lg border p-8" style={{ borderColor: 'var(--stone)' }}>
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-medium mb-2">Global Data &amp; Analytics Carve-Out</h3>
-                        <div className="flex gap-4 text-sm text-gray-600">
-                          <span className="flex items-center gap-1"><Icon name="building-2" size={16} />Media &amp; Information Services</span>
+                        <h3 className="text-xl font-medium mb-2">Global Data & Analytics Carve-Out</h3>
+                        <div className="flex gap-4 text-sm" style={{ color: 'var(--taupe)' }}>
+                          <span className="flex items-center gap-1"><Icon name="building-2" size={16} />Media & Information Services</span>
                           <span className="flex items-center gap-1"><Icon name="calendar" size={16} />24 months</span>
-                          <span className="flex items-center gap-1"><Icon name="users" size={16} />Program team of 150+</span>
+                          <span className="flex items-center gap-1"><Icon name="dollar-sign" size={16} />$3.5B Transaction</span>
                         </div>
                       </div>
                     </div>
                     <div className="mb-6">
-                      <p className="text-gray-700 mb-4">
-                        <span className="font-medium">Challenge:</span> Private equity firm needed to carve out a $3.5B global data and analytics business from a Fortune 500 parent, establishing completely independent technology infrastructure to meet aggressive TSA exit deadlines.
+                      <p className="mb-4" style={{ color: 'var(--graphite)' }}>
+                        <span className="font-medium">Challenge:</span> Private equity firm needed to carve out a $3.5B global data and analytics business from a Fortune 500 parent, establishing completely independent technology infrastructure.
                       </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-medium text-sm mb-3">Approach</h4>
+                        <h4 className="font-medium text-sm mb-3" style={{ color: 'var(--deep-sage)' }}>Approach</h4>
                         <ul className="space-y-2">
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Established PMO to orchestrate separation of 4,000+ employees across 100 countries</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Led technology separation across dozens of integrated platforms and proprietary systems</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Managed parallel workstreams spanning IT, HR, Finance, Legal, and Operations</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" /><span>Coordinated global teams across North America, Europe, and Asia-Pacific time zones</span></li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--muted-sage)' }} />
+                            <span>Established PMO to orchestrate separation of 4,000+ employees</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--muted-sage)' }} />
+                            <span>Led technology separation across dozens of integrated platforms</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="chevron-right" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--muted-sage)' }} />
+                            <span>Managed parallel workstreams spanning IT, HR, Finance, Legal, and Operations</span>
+                          </li>
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-medium text-sm mb-3">Results</h4>
+                        <h4 className="font-medium text-sm mb-3" style={{ color: 'var(--deep-sage)' }}>Results</h4>
                         <ul className="space-y-2">
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Delivered standalone technology stack within TSA timeline — rare for this complexity</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Achieved clean Day 1 operations with zero business disruption</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Maintained 100% continuity for thousands of enterprise clients</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Enabled new entity to operate independently from transaction close</span></li>
-                          <li className="text-sm text-gray-600 flex items-start gap-2"><Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" /><span>Created foundation for what became a $2B+ publicly traded leader</span></li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--deep-sage)' }} />
+                            <span>Delivered standalone technology stack within TSA timeline</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--deep-sage)' }} />
+                            <span>Achieved clean Day 1 operations with zero business disruption</span>
+                          </li>
+                          <li className="text-sm flex items-start gap-2" style={{ color: 'var(--graphite)' }}>
+                            <Icon name="trending-up" size={16} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--deep-sage)' }} />
+                            <span>Created foundation for $2B+ publicly traded leader</span>
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </section>
@@ -572,20 +730,20 @@ function openPost(slug, newTab = true) {
             {/* Insights */}
             <section id="insights" className="py-20 px-6">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-light mb-4">Insights</h2>
-                <p className="text-gray-600 mb-12">
+                <h2 className="text-3xl font-light mb-4 display-font">Insights</h2>
+                <p className="mb-12" style={{ color: 'var(--graphite)' }}>
                   Practical perspectives from the field of transformation.
                 </p>
 
                 <div className="space-y-6">
                   {blogPosts.map((post, i) => (
-                    <article key={i} className="border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition">
+                    <article key={i} className="insight-card border rounded-lg p-6 transition-all">
                       <div className="flex items-start justify-between mb-3">
                         <h3 className="text-xl font-medium">{post.title}</h3>
-                        <Icon name="book-open" size={20} className="text-gray-400" />
+                        <Icon name="book-open" size={20} style={{ color: 'var(--muted-sage)' }} />
                       </div>
 
-                      <div className="flex gap-4 text-sm text-gray-500 mb-3">
+                      <div className="flex gap-4 text-sm mb-3" style={{ color: 'var(--taupe)' }}>
                         <span className="flex items-center gap-1">
                           <Icon name="calendar" size={14} />
                           {post.date}
@@ -596,13 +754,14 @@ function openPost(slug, newTab = true) {
                         </span>
                       </div>
 
-                      <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                      <p className="mb-4" style={{ color: 'var(--graphite)' }}>{post.excerpt}</p>
 
                       <a
                         href={`#/post/${post.slug}`}
                         target="_blank"
                         rel="noopener"
                         className="text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all"
+                        style={{ color: 'var(--deep-sage)' }}
                       >
                         Read More <Icon name="arrow-right" size={16} className="inline" />
                       </a>
@@ -613,23 +772,29 @@ function openPost(slug, newTab = true) {
             </section>
 
             {/* Contact */}
-            <section id="contact" className="py-20 px-6 bg-black text-white">
+            <section id="contact" className="py-20 px-6" style={{ background: 'var(--charcoal)', color: 'var(--cream)' }}>
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-light mb-4">Let's Connect</h2>
-                <p className="text-gray-300 mb-8 max-w-2xl">
-                  Available for strategic advisory, transformation leadership, and
-                  interim executive engagements.
+                <div className="mb-8">
+                  <DeltaSymbol size={48} className="mb-6" style={{ stroke: 'var(--cream)' }} />
+                </div>
+                <h2 className="text-3xl font-light mb-4 display-font">Let's Connect</h2>
+                <p className="mb-8 max-w-2xl" style={{ color: 'var(--stone)' }}>
+                  Available for strategic advisory, transformation leadership, and interim executive engagements.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <p className="font-medium mb-4">Direct Contact</p>
                     <div className="space-y-3">
-                      <a href="mailto:info@changemanaged.io" className="flex items-center gap-3 text-gray-300 hover:text-white transition">
+                      <a href="mailto:info@changemanaged.io" className="flex items-center gap-3 transition" style={{ color: 'var(--stone)' }} 
+                         onMouseEnter={(e) => e.currentTarget.style.color = 'var(--muted-sage)'} 
+                         onMouseLeave={(e) => e.currentTarget.style.color = 'var(--stone)'}>
                         <Icon name="mail" size={18} />
                         info@changemanaged.io
                       </a>
-                      <a href="https://linkedin.com/company/change-managed-io" className="flex items-center gap-3 text-gray-300 hover:text-white transition">
+                      <a href="https://linkedin.com/company/change-managed-io" className="flex items-center gap-3 transition" style={{ color: 'var(--stone)' }}
+                         onMouseEnter={(e) => e.currentTarget.style.color = 'var(--muted-sage)'} 
+                         onMouseLeave={(e) => e.currentTarget.style.color = 'var(--stone)'}>
                         <Icon name="linkedin" size={18} />
                         Connect on LinkedIn
                       </a>
@@ -638,16 +803,28 @@ function openPost(slug, newTab = true) {
 
                   <div>
                     <p className="font-medium mb-4">Engagement Models</p>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Project & program consulting</li>
-                      <li>• Strategic advisory</li>
-                      <li>• Interim leadership placement</li>
-                      <li>• Board advisory services</li>
+                    <ul className="space-y-2" style={{ color: 'var(--stone)' }}>
+                      <li className="flex items-start gap-2">
+                        <span style={{ color: 'var(--muted-sage)' }}>•</span>
+                        <span>Project & program consulting</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span style={{ color: 'var(--muted-sage)' }}>•</span>
+                        <span>Strategic advisory</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span style={{ color: 'var(--muted-sage)' }}>•</span>
+                        <span>Interim leadership placement</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span style={{ color: 'var(--muted-sage)' }}>•</span>
+                        <span>Board advisory services</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
 
-                <div className="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-400">
+                <div className="mt-16 pt-8 border-t text-sm" style={{ borderColor: 'var(--graphite)', color: 'var(--stone)' }}>
                   <p>© 2025 Change Managed LLC • Philadelphia, PA • Veteran-Owned Small Business</p>
                 </div>
               </div>
